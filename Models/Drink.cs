@@ -30,5 +30,15 @@ namespace L2.Models
 
         public static Comparison<Drink> CompareByManufacturer = delegate (Drink d1, Drink d2)
         { return d1.CompareTo(d2); };
+
+        public string ToFixedLengthString()
+        {
+            return $"{string.Format("{0,-20}", Name)}|" +
+                $"{string.Format("{0,-20}", Flavor)}|{string.Format("{0,-50}", Volume)}|" +
+                $"{string.Format("{0,-50}", Price)}|" +
+                $"{string.Format("{0,-50}", Manufacturer)}";
+
+        }
+
     }
 }

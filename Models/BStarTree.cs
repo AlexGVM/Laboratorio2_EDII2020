@@ -475,6 +475,71 @@ namespace L2.Models
         {
             return new BStarTreeEnumerator<T>(Root);
         }
+
+
+        public void EscribirArchivo(BTreeNode<T> NodeTree)
+        {
+            List<BNode<T>> Arbollista = new List<BNode<T>>();
+
+
+            StreamWriter ArchivoArbol = new StreamWriter(Environment.CurrentDirectory + "\\Archivo.txt");
+            ArchivoArbol.WriteLine("Grado " + this.grade);
+            ArchivoArbol.WriteLine("Raiz " + this.Root);
+
+           
+            foreach (var NodoLista in Arbollista)
+            {
+                if (NodeTree.Parent == null)
+                {
+                    ArchivoArbol.Write(NodoLista.Keys + "|0|");
+                }
+                else
+                {
+                    ArchivoArbol.Write(NodoLista.Keys + "|" + NodeTree.Parent.Keys + "|");
+                }
+                if (NodeTree.Children[0] == null)
+                {
+                    string hijos = string.Empty;
+                    for (int i = 0; i < this.grade; i++)
+                    {
+                        hijos += "0|";
+                    }
+
+                    ArchivoArbol.Write(hijos);
+                }
+                else
+                {
+                    foreach (var nodosHijos in NodeTree.Children)
+                    {
+                        if (nodosHijos != null)
+                        {
+                            ArchivoArbol.Write(nodosHijos.Keys + "|");
+                        }
+                        else
+                        {
+                            ArchivoArbol.Write("0|");
+                        }
+
+
+                    }
+                }
+
+                foreach (var valores in NodoLista.values)
+                {
+                    ArchivoArbol.Write(valores.Name + "|");
+                    ArchivoArbol.Write(valores.Flavor + "|");
+                    ArchivoArbol.Write(valores.Price + "|");
+                    ArchivoArbol.Write(valores.Volume + "|");
+                    ArchivoArbol.Write(valores.Manufacturer + "|");
+                }
+                ArchivoArbol.Write("\n");
+            }
+
+            ArchivoArbol.Close();
+
+        }
+
+
     }
 
     public abstract class BNode<T> where T : IComparable
@@ -484,6 +549,7 @@ namespace L2.Models
         internal int KeyCount;
         internal abstract BNode<T> GetParent();
         internal abstract BNode<T>[] GetChildren();
+        public List<Drink> values { get; set; }
 
         internal BNode(int maxKeys)
         {

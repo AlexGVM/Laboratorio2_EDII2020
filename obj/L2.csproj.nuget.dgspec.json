@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asgas\\Desktop\\L2\\L2.csproj": {}
+    "C:\\Users\\alexg\\OneDrive\\Documents\\Landivar\\Estructuras de Datos 2\\Laboratorio2_EDII2020-master\\L2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asgas\\Desktop\\L2\\L2.csproj": {
+    "C:\\Users\\alexg\\OneDrive\\Documents\\Landivar\\Estructuras de Datos 2\\Laboratorio2_EDII2020-master\\L2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asgas\\Desktop\\L2\\L2.csproj",
+        "projectUniqueName": "C:\\Users\\alexg\\OneDrive\\Documents\\Landivar\\Estructuras de Datos 2\\Laboratorio2_EDII2020-master\\L2.csproj",
         "projectName": "L2",
-        "projectPath": "C:\\Users\\asgas\\Desktop\\L2\\L2.csproj",
-        "packagesPath": "C:\\Users\\asgas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asgas\\Desktop\\L2\\obj\\",
+        "projectPath": "C:\\Users\\alexg\\OneDrive\\Documents\\Landivar\\Estructuras de Datos 2\\Laboratorio2_EDII2020-master\\L2.csproj",
+        "packagesPath": "C:\\Users\\alexg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexg\\OneDrive\\Documents\\Landivar\\Estructuras de Datos 2\\Laboratorio2_EDII2020-master\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\asgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
