@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using L2.Models;
 using System.IO;
 
 namespace L2.Models
@@ -105,7 +106,7 @@ namespace L2.Models
         {
             if (node == null)
             {
-                node = new BTreeNode<T>(maxKeys, null);
+                node = new BTreeNode<T>(maxKeysRoot, null);
                 Root = node;
             }
 
